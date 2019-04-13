@@ -1,0 +1,26 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/guillaume/Documents/asterics2020/asterics-cpp/ExampleOptimisation/AstericsHPC/asterics_alloc.cpp
+malloc.h
+-
+stdlib.h
+-
+string.h
+-
+asterics_alloc.h
+/home/guillaume/Documents/asterics2020/asterics-cpp/ExampleOptimisation/AstericsHPC/asterics_alloc.h
+
+/home/guillaume/Documents/asterics2020/asterics-cpp/ExampleOptimisation/AstericsHPC/asterics_alloc.h
+
+/home/guillaume/Documents/asterics2020/asterics-cpp/ExampleOptimisation/AstericsHPC/timer.cpp
+timer.h
+/home/guillaume/Documents/asterics2020/asterics-cpp/ExampleOptimisation/AstericsHPC/timer.h
+
+/home/guillaume/Documents/asterics2020/asterics-cpp/ExampleOptimisation/AstericsHPC/timer.h
+

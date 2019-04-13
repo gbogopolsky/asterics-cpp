@@ -1,0 +1,10 @@
+setup.py
+/home/guillaume/Documents/asterics2020/asterics-cpp/ExampleOptimisation/AstericsHPC/astericshpc/allocMatrixWrapper.cpp
+/home/guillaume/Documents/asterics2020/asterics-cpp/ExampleOptimisation/AstericsHPC/astericshpc/allocTableWrapper.cpp
+/home/guillaume/Documents/asterics2020/asterics-cpp/ExampleOptimisation/AstericsHPC/astericshpc/astericshpc.cpp
+/home/guillaume/Documents/asterics2020/asterics-cpp/ExampleOptimisation/AstericsHPC/astericshpc/timerWrapper.cpp
+astericshpc.egg-info/PKG-INFO
+astericshpc.egg-info/SOURCES.txt
+astericshpc.egg-info/dependency_links.txt
+astericshpc.egg-info/requires.txt
+astericshpc.egg-info/top_level.txt
