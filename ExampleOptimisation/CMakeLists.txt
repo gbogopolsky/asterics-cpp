@@ -1,5 +1,5 @@
-project(HPC_ASTERICS)
 cmake_minimum_required(VERSION 3.0)
+project(HPC_ASTERICS)
 
 # Be sure that python3 exists (this might not be the case on mac)
 execute_process(COMMAND which python3
@@ -24,4 +24,4 @@ add_definitions(-DVECTOR_ALIGNEMENT=${VECTOR_ALIGNEMENT})
 add_subdirectory(AstericsHPC)
 include_directories(${CMAKE_CURRENT_SOURCE_DIR}/AstericsHPC)
 
-
+add_subdirectory(1-HadamardProduct)
