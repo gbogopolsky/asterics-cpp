@@ -44,3 +44,10 @@ target_link_libraries(saxpy_vectorizeMMX asterics_hpc)
 runExample(saxpy_vectorizeMMX)
 
 plotPerf("saxpyVectorize" saxpy_O3 saxpy_vectorizeAVX saxpy_vectorizeSSE saxpy_vectorizeMMX)
+
+add_executable(saxpy_intrinsics main_intrinsics.cpp)
+set_property(TARGET saxpy_intrinsics PROPERTY COMPILE_FLAGS "-O3 -march=native -mtune=native")
+target_link_libraries(saxpy_intrinsics asterics_hpc)
+runExample(saxpy_intrinsics)
+
+plotPerf("saxpyIntrinsics" saxpy_O3 saxpy_vectorizeAVX saxpy_intrinsics)
