@@ -27,4 +27,4 @@ include_directories(${CMAKE_CURRENT_SOURCE_DIR}/AstericsHPC)
 add_subdirectory(1-HadamardProduct)
 
 add_subdirectory(3-Saxpy)
-add_subdirectory(4-Reduction)
+# add_subdirectory(4-Reduction)

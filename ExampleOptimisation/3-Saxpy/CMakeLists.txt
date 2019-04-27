@@ -26,7 +26,7 @@ set_property(TARGET saxpy_Ofast PROPERTY COMPILE_FLAGS "-Ofast")
 target_link_libraries(saxpy_Ofast asterics_hpc)
 runExample(saxpy_Ofast)
 
-plotPerf("saxpyBase" saxpy_O0 saxpy_O1 saxpy_O2 saxpy_O3 saxpy_Ofast) 
+plotPerf("saxpyBase" saxpy_O0 saxpy_O1 saxpy_O2 saxpy_O3 saxpy_Ofast)
 
 add_executable(saxpy_vectorizeAVX main_vectorize.cpp)
 set_property(TARGET saxpy_vectorizeAVX PROPERTY COMPILE_FLAGS "-O3 -ftree-vectorize -march=native -mtune=native -mavx")
@@ -43,7 +43,12 @@ set_property(TARGET saxpy_vectorizeMMX PROPERTY COMPILE_FLAGS "-O3 -ftree-vector
 target_link_libraries(saxpy_vectorizeMMX asterics_hpc)
 runExample(saxpy_vectorizeMMX)
 
-plotPerf("saxpyVectorize" saxpy_O3 saxpy_vectorizeAVX saxpy_vectorizeSSE saxpy_vectorizeMMX)
+add_executable(saxpy_vectorizeAVX2 main_vectorize.cpp)
+set_property(TARGET saxpy_vectorizeAVX2 PROPERTY COMPILE_FLAGS "-O3 -ftree-vectorize -march=native -mtune=native -mavx2")
+target_link_libraries(saxpy_vectorizeAVX2 asterics_hpc)
+runExample(saxpy_vectorizeAVX2)
+
+plotPerf("saxpyVectorize" saxpy_O3 saxpy_vectorizeAVX saxpy_vectorizeSSE saxpy_vectorizeMMX saxpy_vectorizeAVX2)
 
 add_executable(saxpy_intrinsics main_intrinsics.cpp)
 set_property(TARGET saxpy_intrinsics PROPERTY COMPILE_FLAGS "-O3 -march=native -mtune=native")

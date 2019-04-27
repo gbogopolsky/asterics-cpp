@@ -43,7 +43,12 @@ set_property(TARGET hadamard_product_vectorizeMMX PROPERTY COMPILE_FLAGS "-O3 -f
 target_link_libraries(hadamard_product_vectorizeMMX asterics_hpc)
 runExample(hadamard_product_vectorizeMMX)
 
-plotPerf("hadamardVectorize" hadamard_product_O3 hadamard_product_vectorizeAVX hadamard_product_vectorizeSSE hadamard_product_vectorizeMMX)
+add_executable(hadamard_product_vectorizeAVX2 main_vectorize.cpp)
+set_property(TARGET hadamard_product_vectorizeAVX2 PROPERTY COMPILE_FLAGS "-O3 -ftree-vectorize -march=native -mtune=native -mavx2")
+target_link_libraries(hadamard_product_vectorizeAVX2 asterics_hpc)
+runExample(hadamard_product_vectorizeAVX2)
+
+plotPerf("hadamardVectorize" hadamard_product_O3 hadamard_product_vectorizeAVX hadamard_product_vectorizeSSE hadamard_product_vectorizeMMX hadamard_product_vectorizeAVX2)
 
 add_executable(hadamard_product_intrinsics main_intrinsics.cpp)
 set_property(TARGET hadamard_product_intrinsics PROPERTY COMPILE_FLAGS "-O3 -march=native -mtune=native")
